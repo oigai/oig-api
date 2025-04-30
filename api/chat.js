@@ -4,7 +4,6 @@ export default async function handler(req, res) {
   }
 
   const { message } = req.body;
-
   if (!message) {
     return res.status(400).json({ error: 'Missing message in request body' });
   }
@@ -29,8 +28,8 @@ export default async function handler(req, res) {
 
     const data = await completion.json();
     const reply = data.choices?.[0]?.message?.content?.trim() || 'ตอบไม่สำเร็จ';
-
     res.status(200).json({ response: reply });
+
   } catch (error) {
     res.status(500).json({ error: 'เกิดข้อผิดพลาดภายในเซิร์ฟเวอร์' });
   }
