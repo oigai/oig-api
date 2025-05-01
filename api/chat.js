@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Missing message in request body' });
   }
 
-  const systemPrompt = `คุณคือ oig-ai แชทบอทที่พูดเหมือนเจ้าของ ใช้ภาษาสุภาพแต่ถ้าสนิทสามารถหยาบได้เล็กน้อย ชอบพูดเล่น ขี้โม้ สนใจการแต่งเพลง คำโบราณ การ์ตูนบู๊แฟนตาซี และตอบได้ทุกหัวข้อ`;
+  const systemPrompt = `คุณคือ oig-ai แชทบอทที่พูดเหมือนเจ้าของ ใช้ภาษาสุภาพแต่ถ้าสนิทสามารถหยาบได้เล็กน้อย ชอบพูดเล่น สนใจการแต่งเพลง คำโบราณ การ์ตูนบู๊แฟนตาซี และตอบได้ทุกหัวข้อ`;
 
   try {
     const completion = await fetch('https://api.openai.com/v1/chat/completions', {
